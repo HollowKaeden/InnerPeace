@@ -1,0 +1,85 @@
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(213, 221, 234);
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: scroll;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+aside h1{
+    text-align: center;
+    padding-top: 80px;
+}
+
+.forms a {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(204, 223, 194);
+    width: 30%;
+    margin: 0 auto;
+}
+
+.forms form + form {
+    display: none;
+}
+
+.contacts {
+    display: grid;
+    column-gap: 50px;
+    padding: 0px 20px 0px 20px;
+}
+
+.contacts p input {
+    height: 0px;
+    padding: 0px;
+    border: 1px solid black;
+    transition: height 0.2s ease-in-out;
+    width: 100%;
+}
+
+.contacts p label {
+    background-color: rgba(127, 133, 121, 0.2);
+}
+
+.contacts p label:hover ~ input, .contacts p input:hover, .contacts p input:valid, .contacts p input:focus {
+    border: 2px solid black;
+    height: 25px;
+}
+
+.cont-message input {
+    width: 350px;
+}
+
+#submit1, #submit2 {
+    background-color: rgba(135, 206, 250, 0.26);
+    border-radius: 4px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .contacts {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 2560px) {
+    .cont-message, #submit1, #submit2, form a, .tel-login, .password-login{
+        grid-column: span 2;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html> <!-- Тип документа для браузера -->
+<html lang="ru"> <!-- Самый главный тег -->
+<head> <!-- Вся техническая информация о странице -->
+    <meta charset="UTF-8"> <!-- Кодировка страницы -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"> <!-- Для совместимости с IE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--для красивого отображения на мобильных устройствах -->
+    <title>Медитация</title> <!-- Заголовок страницы -->
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/header.js" defer></script>
+    <script src="js/registration.js" defer></script>
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="favicon.ico" sizes="any" type="image/x-icon"> <!-- Фавиконка страницы -->
+</head>
+<body> <!-- Тело веб-страницы -->
+    <!-- Шапка страницы -->
+    <header>
+        <img class="meditation" src="resources/images/logo.png" alt="Лого сайта" width="80", height="80">
+        <span>Inner Peace</span>
+        <img class="user-img" src="resources/images/user-cool.png" alt="Пользователь" width="64" height="64" usemap="#user">
+        <map id="user">
+            <area shape="circle" coords="32, 32, 32" href="registration.html">
+        </map>
+        <label>
+        <input type="checkbox" class="checkbox">
+        <span class="menu"> <span class="hamburger"></span> </span>
+        <nav class="navbar">
+            <ul>
+                <li> <a href="index.html">Главная</a> </li>
+                <li> <a href="classes.html">Занятия</a> </li>
+                <li> <a href="techniques.html">Техники медитации</a> </li>
+                <li> <a href="gallery.html">Галерея</a> </li>
+            </ul>
+        </nav>
+        </label>
+    </header>
+    <!-- Уникальный контент на странице -->
+    <main>
+        <aside>
+            <h1>Войти или зарегистрироваться</h1>
+            <div class="forms">
+                <form class="contacts">
+                    <p class="tel-login">
+                        <label for="tel">Телефон</label><br>
+                        <input type="tel" name="tel" id="tel" required>
+                    </p>
+                    <p class="password-login">
+                        <label for="password2">Пароль</label><br>
+                        <input type="password" name="password2" id="password2" required>
+                    </p>
+                    <input type="submit" name="submit1" id="submit1" value="Войти" required>
+                </form>
+                <form class="contacts">
+                    <p class="name">
+                        <label for="name">Имя</label><br>
+                        <input type="text" name="name" id="name" required>
+                    </p>
+                    <p class="surname">
+                        <label for="surname">Фамилия</label><br>
+                        <input type="text" name="surname" id="surname" required>
+                    </p>
+                    <p class="email">
+                        <label for="mail">Почта</label><br>
+                        <input type="mail" name="mail" id="mail" required>
+                    </p>
+                    <p class="tel-register">
+                        <label for="tel2">Телефон</label><br>
+                        <input type="tel" name="tel2" id="tel2" required>
+                    </p>
+                    <p class="password-register">
+                        <label for="password">Пароль</label><br>
+                        <input type="password" name="password" id="password" required>
+                    </p>
+                    <p class="cont-message">
+                        <label for="message">Почему вы хотите заниматься медитацией?</label><br>
+                        <input type="text" name="message" id="message" required>
+                    </p>
+                    <input type="submit" name="submit2" id="submit2" value="Зарегистрироваться" required>
+                </form>
+                <a class="link" href="javascript:on_click();">Регистрация</a>
+            </div>
+        </aside>
+    </main>
+    <!-- Подвал сайта с информацией -->
+    <footer>
+        <p>Сайт разработал студент группы ИКБО-30-22</p>
+        <p>Артамонов Иван Алексеевич</p>
+        <p>Телефон: +7(906)037-18-48<br>Почта: Vanya200373@yandex.ru</p>
+    </footer>
+</body>
+</html>

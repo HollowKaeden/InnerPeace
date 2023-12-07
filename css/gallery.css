@@ -1,0 +1,92 @@
+h1 {
+    padding-top: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24pt;
+    color: rgb(127, 133, 121);
+}
+
+.gallery-grid{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.gallery-grid, .gallery-grid *{
+    box-sizing: border-box;
+}
+.grid-item{
+    width: 33.33%;
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.grid-item-inner{
+    position:relative;
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.grid-item-inner:before{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.4s ease;
+    content: '';
+}
+
+.grid-item-inner:hover:before{
+    opacity: 1;
+}
+
+.grid-item-title{
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-size: 24px;
+    color: white;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.grid-item-title > span{
+    display: block;
+    transform: translateY(30px);
+    transition: transform .3s ease;
+}
+
+.grid-item-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s ease;
+}
+
+.grid-item-inner:hover .grid-item-img{
+    transform: scale(1.05);
+}
+
+.grid-item-inner:hover .grid-item-title > span {
+    transform: translateY(0);
+}
+
+@media screen and (min-width: 320px) and (max-width: 1000px)
+{
+    .gallery-grid {
+        flex-direction: column;
+    }
+
+    .grid-item {
+        width: 100%;
+    }
+}
