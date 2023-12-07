@@ -30,7 +30,7 @@ main p + p {
 div + div {
     width: 50%;
     margin: 0 auto;
-    height:500px;
+    height: auto;
     background-color: rgb(213, 221, 234);
 }
 
